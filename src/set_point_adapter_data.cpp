@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'set_point_adapter'.
 //
-// Model version                  : 6.2
+// Model version                  : 6.3
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Tue Jan 28 17:26:40 2025
+// C/C++ source code generated on : Tue Jan 28 17:35:17 2025
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Generic->Unspecified (assume 32-bit Generic)

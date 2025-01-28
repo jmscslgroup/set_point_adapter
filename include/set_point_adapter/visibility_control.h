@@ -28,5 +28,5 @@
   #define SET_POINT_ADAPTER_PUBLIC_TYPE
 #endif
 #endif  // SET_POINT_ADAPTER__VISIBILITY_CONTROL_H_
-// Generated 28-Jan-2025 17:26:46
+// Generated 28-Jan-2025 17:35:22
 // Copyright 2019-2020 The MathWorks, Inc.

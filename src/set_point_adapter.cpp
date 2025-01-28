@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'set_point_adapter'.
 //
-// Model version                  : 6.2
+// Model version                  : 6.3
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Tue Jan 28 17:26:40 2025
+// C/C++ source code generated on : Tue Jan 28 17:35:17 2025
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Generic->Unspecified (assume 32-bit Generic)
@@ -84,10 +84,10 @@ void set_point_adapter_initialize(void)
 {
   {
     int32_T i;
-    char_T b_zeroDelimTopic[16];
+    char_T b_zeroDelimTopic[15];
     char_T b_zeroDelimTopic_1[14];
     char_T b_zeroDelimTopic_0[8];
-    static const char_T b_zeroDelimTopic_2[16] = "acc/set_point_2";
+    static const char_T b_zeroDelimTopic_2[15] = "acc/set_speed2";
     static const char_T b_zeroDelimTopic_3[8] = "cmd_vel";
     static const char_T b_zeroDelimTopic_4[14] = "v_ref_adapter";
 
@@ -103,7 +103,7 @@ void set_point_adapter_initialize(void)
     // Start for MATLABSystem: '<S5>/SourceBlock'
     set_point_adapter_DW.obj_gs.matlabCodegenIsDeleted = false;
     set_point_adapter_DW.obj_gs.isInitialized = 1;
-    for (i = 0; i < 16; i++) {
+    for (i = 0; i < 15; i++) {
       b_zeroDelimTopic[i] = b_zeroDelimTopic_2[i];
     }
 

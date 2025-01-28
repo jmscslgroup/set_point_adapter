@@ -3,9 +3,9 @@
 //
 // Code generated for Simulink model 'set_point_adapter'.
 //
-// Model version                  : 6.2
+// Model version                  : 6.3
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Tue Jan 28 17:26:44 2025
+// C/C++ source code generated on : Tue Jan 28 17:35:20 2025
 //
 
 #include <stdio.h>
