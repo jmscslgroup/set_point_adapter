@@ -9,7 +9,7 @@
 //
 // Model version                  : 6.2
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Tue Jan 28 17:16:08 2025
+// C/C++ source code generated on : Tue Jan 28 17:26:40 2025
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Generic->Unspecified (assume 32-bit Generic)
@@ -27,15 +27,22 @@ P_set_point_adapter_T set_point_adapter_P = {
     0.0                                // Data
   },
 
+  // Computed Parameter: Constant_Value_d
+  //  Referenced by: '<S2>/Constant'
+
+  {
+    0.0                                // Data
+  },
+
   // Computed Parameter: Out1_Y0
-  //  Referenced by: '<S4>/Out1'
+  //  Referenced by: '<S6>/Out1'
 
   {
     0.0                                // Data
   },
 
   // Computed Parameter: Constant_Value_j
-  //  Referenced by: '<S3>/Constant'
+  //  Referenced by: '<S5>/Constant'
 
   {
     0.0                                // Data
