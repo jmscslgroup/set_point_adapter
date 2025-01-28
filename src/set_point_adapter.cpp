@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'set_point_adapter'.
 //
-// Model version                  : 6.1
+// Model version                  : 6.2
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Tue Jan 28 14:21:35 2025
+// C/C++ source code generated on : Tue Jan 28 17:16:08 2025
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Generic->Unspecified (assume 32-bit Generic)
@@ -36,48 +36,33 @@ void set_point_adapter_step(void)
 {
   SL_Bus_set_point_adapter_std_msgs_Float64 b_varargout_2;
   SL_Bus_set_point_adapter_std_msgs_Float64 rtb_BusAssignment1;
-  real_T rtb_Gain;
   boolean_T b_varargout_1;
 
-  // BusAssignment: '<Root>/Bus Assignment' incorporates:
-  //   Constant: '<S1>/Constant'
-
-  set_point_adapter_B.BusAssignment = set_point_adapter_P.Constant_Value;
-
   // Outputs for Atomic SubSystem: '<Root>/Subscribe1'
-  // MATLABSystem: '<S5>/SourceBlock'
+  // MATLABSystem: '<S3>/SourceBlock'
   b_varargout_1 = Sub_set_point_adapter_31.getLatestMessage(&b_varargout_2);
 
-  // Outputs for Enabled SubSystem: '<S5>/Enabled Subsystem' incorporates:
-  //   EnablePort: '<S6>/Enable'
+  // Outputs for Enabled SubSystem: '<S3>/Enabled Subsystem' incorporates:
+  //   EnablePort: '<S4>/Enable'
 
-  // Start for MATLABSystem: '<S5>/SourceBlock'
+  // Start for MATLABSystem: '<S3>/SourceBlock'
   if (b_varargout_1) {
-    // SignalConversion generated from: '<S6>/In1'
+    // SignalConversion generated from: '<S4>/In1'
     set_point_adapter_B.In1 = b_varargout_2;
   }
 
-  // End of Start for MATLABSystem: '<S5>/SourceBlock'
-  // End of Outputs for SubSystem: '<S5>/Enabled Subsystem'
+  // End of Start for MATLABSystem: '<S3>/SourceBlock'
+  // End of Outputs for SubSystem: '<S3>/Enabled Subsystem'
   // End of Outputs for SubSystem: '<Root>/Subscribe1'
 
-  // Gain: '<Root>/Gain'
-  rtb_Gain = set_point_adapter_P.Gain_Gain * set_point_adapter_B.In1.Data;
+  // BusAssignment: '<Root>/Bus Assignment1' incorporates:
+  //   Gain: '<Root>/Gain'
 
-  // BusAssignment: '<Root>/Bus Assignment'
-  set_point_adapter_B.BusAssignment.Linear.X = rtb_Gain;
-
-  // Outputs for Atomic SubSystem: '<Root>/Publish'
-  // MATLABSystem: '<S3>/SinkBlock'
-  Pub_set_point_adapter_3.publish(&set_point_adapter_B.BusAssignment);
-
-  // End of Outputs for SubSystem: '<Root>/Publish'
-
-  // BusAssignment: '<Root>/Bus Assignment1'
-  rtb_BusAssignment1.Data = rtb_Gain;
+  rtb_BusAssignment1.Data = set_point_adapter_P.Gain_Gain *
+    set_point_adapter_B.In1.Data;
 
   // Outputs for Atomic SubSystem: '<Root>/Publish1'
-  // MATLABSystem: '<S4>/SinkBlock'
+  // MATLABSystem: '<S2>/SinkBlock'
   Pub_set_point_adapter_44.publish(&rtb_BusAssignment1);
 
   // End of Outputs for SubSystem: '<Root>/Publish1'
@@ -89,60 +74,44 @@ void set_point_adapter_initialize(void)
   {
     int32_T i;
     char_T b_zeroDelimTopic[16];
-    char_T b_zeroDelimTopic_1[12];
-    char_T b_zeroDelimTopic_0[6];
-    static const char_T b_zeroDelimTopic_2[16] = "acc/set_point_2";
-    static const char_T b_zeroDelimTopic_3[6] = "v_ref";
-    static const char_T b_zeroDelimTopic_4[12] = "v_ref_float";
+    char_T b_zeroDelimTopic_0[8];
+    static const char_T b_zeroDelimTopic_1[16] = "acc/set_point_2";
+    static const char_T b_zeroDelimTopic_2[8] = "cmd_vel";
 
     // SystemInitialize for Atomic SubSystem: '<Root>/Subscribe1'
-    // SystemInitialize for Enabled SubSystem: '<S5>/Enabled Subsystem'
-    // SystemInitialize for SignalConversion generated from: '<S6>/In1' incorporates:
-    //   Outport: '<S6>/Out1'
+    // SystemInitialize for Enabled SubSystem: '<S3>/Enabled Subsystem'
+    // SystemInitialize for SignalConversion generated from: '<S4>/In1' incorporates:
+    //   Outport: '<S4>/Out1'
 
     set_point_adapter_B.In1 = set_point_adapter_P.Out1_Y0;
 
-    // End of SystemInitialize for SubSystem: '<S5>/Enabled Subsystem'
+    // End of SystemInitialize for SubSystem: '<S3>/Enabled Subsystem'
 
-    // Start for MATLABSystem: '<S5>/SourceBlock'
+    // Start for MATLABSystem: '<S3>/SourceBlock'
     set_point_adapter_DW.obj_g.matlabCodegenIsDeleted = false;
     set_point_adapter_DW.obj_g.isInitialized = 1;
     for (i = 0; i < 16; i++) {
-      b_zeroDelimTopic[i] = b_zeroDelimTopic_2[i];
+      b_zeroDelimTopic[i] = b_zeroDelimTopic_1[i];
     }
 
     Sub_set_point_adapter_31.createSubscriber(&b_zeroDelimTopic[0], 1);
     set_point_adapter_DW.obj_g.isSetupComplete = true;
 
-    // End of Start for MATLABSystem: '<S5>/SourceBlock'
+    // End of Start for MATLABSystem: '<S3>/SourceBlock'
     // End of SystemInitialize for SubSystem: '<Root>/Subscribe1'
 
-    // SystemInitialize for Atomic SubSystem: '<Root>/Publish'
-    // Start for MATLABSystem: '<S3>/SinkBlock'
-    set_point_adapter_DW.obj_h.matlabCodegenIsDeleted = false;
-    set_point_adapter_DW.obj_h.isInitialized = 1;
-    for (i = 0; i < 6; i++) {
-      b_zeroDelimTopic_0[i] = b_zeroDelimTopic_3[i];
-    }
-
-    Pub_set_point_adapter_3.createPublisher(&b_zeroDelimTopic_0[0], 1);
-    set_point_adapter_DW.obj_h.isSetupComplete = true;
-
-    // End of Start for MATLABSystem: '<S3>/SinkBlock'
-    // End of SystemInitialize for SubSystem: '<Root>/Publish'
-
     // SystemInitialize for Atomic SubSystem: '<Root>/Publish1'
-    // Start for MATLABSystem: '<S4>/SinkBlock'
+    // Start for MATLABSystem: '<S2>/SinkBlock'
     set_point_adapter_DW.obj.matlabCodegenIsDeleted = false;
     set_point_adapter_DW.obj.isInitialized = 1;
-    for (i = 0; i < 12; i++) {
-      b_zeroDelimTopic_1[i] = b_zeroDelimTopic_4[i];
+    for (i = 0; i < 8; i++) {
+      b_zeroDelimTopic_0[i] = b_zeroDelimTopic_2[i];
     }
 
-    Pub_set_point_adapter_44.createPublisher(&b_zeroDelimTopic_1[0], 1);
+    Pub_set_point_adapter_44.createPublisher(&b_zeroDelimTopic_0[0], 1);
     set_point_adapter_DW.obj.isSetupComplete = true;
 
-    // End of Start for MATLABSystem: '<S4>/SinkBlock'
+    // End of Start for MATLABSystem: '<S2>/SinkBlock'
     // End of SystemInitialize for SubSystem: '<Root>/Publish1'
   }
 }
@@ -151,30 +120,21 @@ void set_point_adapter_initialize(void)
 void set_point_adapter_terminate(void)
 {
   // Terminate for Atomic SubSystem: '<Root>/Subscribe1'
-  // Terminate for MATLABSystem: '<S5>/SourceBlock'
+  // Terminate for MATLABSystem: '<S3>/SourceBlock'
   if (!set_point_adapter_DW.obj_g.matlabCodegenIsDeleted) {
     set_point_adapter_DW.obj_g.matlabCodegenIsDeleted = true;
   }
 
-  // End of Terminate for MATLABSystem: '<S5>/SourceBlock'
+  // End of Terminate for MATLABSystem: '<S3>/SourceBlock'
   // End of Terminate for SubSystem: '<Root>/Subscribe1'
 
-  // Terminate for Atomic SubSystem: '<Root>/Publish'
-  // Terminate for MATLABSystem: '<S3>/SinkBlock'
-  if (!set_point_adapter_DW.obj_h.matlabCodegenIsDeleted) {
-    set_point_adapter_DW.obj_h.matlabCodegenIsDeleted = true;
-  }
-
-  // End of Terminate for MATLABSystem: '<S3>/SinkBlock'
-  // End of Terminate for SubSystem: '<Root>/Publish'
-
   // Terminate for Atomic SubSystem: '<Root>/Publish1'
-  // Terminate for MATLABSystem: '<S4>/SinkBlock'
+  // Terminate for MATLABSystem: '<S2>/SinkBlock'
   if (!set_point_adapter_DW.obj.matlabCodegenIsDeleted) {
     set_point_adapter_DW.obj.matlabCodegenIsDeleted = true;
   }
 
-  // End of Terminate for MATLABSystem: '<S4>/SinkBlock'
+  // End of Terminate for MATLABSystem: '<S2>/SinkBlock'
   // End of Terminate for SubSystem: '<Root>/Publish1'
 }
 

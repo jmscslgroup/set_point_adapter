@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'set_point_adapter'.
 //
-// Model version                  : 6.1
+// Model version                  : 6.2
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Tue Jan 28 14:21:35 2025
+// C/C++ source code generated on : Tue Jan 28 17:16:08 2025
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Generic->Unspecified (assume 32-bit Generic)
@@ -36,30 +36,25 @@
 
 // Block signals (default storage)
 struct B_set_point_adapter_T {
-  SL_Bus_set_point_adapter_geometry_msgs_Twist BusAssignment;// '<Root>/Bus Assignment' 
-  SL_Bus_set_point_adapter_std_msgs_Float64 In1;// '<S6>/In1'
+  SL_Bus_set_point_adapter_std_msgs_Float64 In1;// '<S4>/In1'
 };
 
 // Block states (default storage) for system '<Root>'
 struct DW_set_point_adapter_T {
-  ros_slroscpp_internal_block_P_T obj; // '<S4>/SinkBlock'
-  ros_slroscpp_internal_block_P_T obj_h;// '<S3>/SinkBlock'
-  ros_slroscpp_internal_block_S_T obj_g;// '<S5>/SourceBlock'
+  ros_slroscpp_internal_block_P_T obj; // '<S2>/SinkBlock'
+  ros_slroscpp_internal_block_S_T obj_g;// '<S3>/SourceBlock'
 };
 
 // Parameters (default storage)
 struct P_set_point_adapter_T_ {
-  SL_Bus_set_point_adapter_geometry_msgs_Twist Constant_Value;// Computed Parameter: Constant_Value
-                                                                 //  Referenced by: '<S1>/Constant'
-
-  SL_Bus_set_point_adapter_std_msgs_Float64 Constant_Value_d;// Computed Parameter: Constant_Value_d
-                                                                //  Referenced by: '<S2>/Constant'
+  SL_Bus_set_point_adapter_std_msgs_Float64 Constant_Value;// Computed Parameter: Constant_Value
+                                                              //  Referenced by: '<S1>/Constant'
 
   SL_Bus_set_point_adapter_std_msgs_Float64 Out1_Y0;// Computed Parameter: Out1_Y0
-                                                       //  Referenced by: '<S6>/Out1'
+                                                       //  Referenced by: '<S4>/Out1'
 
   SL_Bus_set_point_adapter_std_msgs_Float64 Constant_Value_j;// Computed Parameter: Constant_Value_j
-                                                                //  Referenced by: '<S5>/Constant'
+                                                                //  Referenced by: '<S3>/Constant'
 
   real_T Gain_Gain;                    // Expression: 0.44704
                                           //  Referenced by: '<Root>/Gain'
@@ -158,12 +153,10 @@ extern volatile boolean_T runModel;
 //  Here is the system hierarchy for this model
 //
 //  '<Root>' : 'set_point_adapter'
-//  '<S1>'   : 'set_point_adapter/Blank Message'
-//  '<S2>'   : 'set_point_adapter/Blank Message2'
-//  '<S3>'   : 'set_point_adapter/Publish'
-//  '<S4>'   : 'set_point_adapter/Publish1'
-//  '<S5>'   : 'set_point_adapter/Subscribe1'
-//  '<S6>'   : 'set_point_adapter/Subscribe1/Enabled Subsystem'
+//  '<S1>'   : 'set_point_adapter/Blank Message2'
+//  '<S2>'   : 'set_point_adapter/Publish1'
+//  '<S3>'   : 'set_point_adapter/Subscribe1'
+//  '<S4>'   : 'set_point_adapter/Subscribe1/Enabled Subsystem'
 
 #endif                                 // RTW_HEADER_set_point_adapter_h_
 

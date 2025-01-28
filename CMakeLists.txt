@@ -20,7 +20,6 @@ endif()
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
-  geometry_msgs
 )
 ## The catkin_package macro generates cmake config files for your package
 ## Declare things to be passed to dependent projects
@@ -30,7 +29,6 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
   CATKIN_DEPENDS
-  geometry_msgs
   roscpp
   std_msgs
   INCLUDE_DIRS include
@@ -125,4 +123,4 @@ add_custom_command(
                    ARGS -E copy ${PROJECT_SOURCE_DIR}/src/${file_i} ${CATKIN_DEVEL_PREFIX}/set_point_adapter_ert_rtw/${file_i}
 				   )
 endforeach(file_i)
-# Generated on Tue Jan 28 14:21:51 2025
+# Generated on Tue Jan 28 17:16:18 2025

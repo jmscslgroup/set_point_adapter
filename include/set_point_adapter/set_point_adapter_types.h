@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'set_point_adapter'.
 //
-// Model version                  : 6.1
+// Model version                  : 6.2
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Tue Jan 28 14:21:35 2025
+// C/C++ source code generated on : Tue Jan 28 17:16:08 2025
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Generic->Unspecified (assume 32-bit Generic)
@@ -19,34 +19,6 @@
 #ifndef RTW_HEADER_set_point_adapter_types_h_
 #define RTW_HEADER_set_point_adapter_types_h_
 #include "rtwtypes.h"
-#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_set_point_adapter_geometry_msgs_Vector3_
-#define DEFINED_TYPEDEF_FOR_SL_Bus_set_point_adapter_geometry_msgs_Vector3_
-
-// MsgType=geometry_msgs/Vector3
-struct SL_Bus_set_point_adapter_geometry_msgs_Vector3
-{
-  real_T X;
-  real_T Y;
-  real_T Z;
-};
-
-#endif
-
-#ifndef DEFINED_TYPEDEF_FOR_SL_Bus_set_point_adapter_geometry_msgs_Twist_
-#define DEFINED_TYPEDEF_FOR_SL_Bus_set_point_adapter_geometry_msgs_Twist_
-
-// MsgType=geometry_msgs/Twist
-struct SL_Bus_set_point_adapter_geometry_msgs_Twist
-{
-  // MsgType=geometry_msgs/Vector3
-  SL_Bus_set_point_adapter_geometry_msgs_Vector3 Linear;
-
-  // MsgType=geometry_msgs/Vector3
-  SL_Bus_set_point_adapter_geometry_msgs_Vector3 Angular;
-};
-
-#endif
-
 #ifndef DEFINED_TYPEDEF_FOR_SL_Bus_set_point_adapter_std_msgs_Float64_
 #define DEFINED_TYPEDEF_FOR_SL_Bus_set_point_adapter_std_msgs_Float64_
 

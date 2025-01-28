@@ -7,9 +7,9 @@
 //
 // Code generated for Simulink model 'set_point_adapter'.
 //
-// Model version                  : 6.1
+// Model version                  : 6.2
 // Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
-// C/C++ source code generated on : Tue Jan 28 14:21:35 2025
+// C/C++ source code generated on : Tue Jan 28 17:16:08 2025
 //
 // Target selection: ert.tlc
 // Embedded hardware selection: Generic->Unspecified (assume 32-bit Generic)
@@ -24,35 +24,18 @@ P_set_point_adapter_T set_point_adapter_P = {
   //  Referenced by: '<S1>/Constant'
 
   {
-    {
-      0.0,                             // X
-      0.0,                             // Y
-      0.0                              // Z
-    },                                 // Linear
-
-    {
-      0.0,                             // X
-      0.0,                             // Y
-      0.0                              // Z
-    }                                  // Angular
-  },
-
-  // Computed Parameter: Constant_Value_d
-  //  Referenced by: '<S2>/Constant'
-
-  {
     0.0                                // Data
   },
 
   // Computed Parameter: Out1_Y0
-  //  Referenced by: '<S6>/Out1'
+  //  Referenced by: '<S4>/Out1'
 
   {
     0.0                                // Data
   },
 
   // Computed Parameter: Constant_Value_j
-  //  Referenced by: '<S5>/Constant'
+  //  Referenced by: '<S3>/Constant'
 
   {
     0.0                                // Data
